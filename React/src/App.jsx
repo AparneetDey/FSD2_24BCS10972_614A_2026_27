@@ -1,11 +1,15 @@
-import React from 'react'
-import Form from './ui/Form'
+import { use, useEffect, useReducer, useRef, useState } from "react";
+import { useMoney } from "./context/MoneyContext"
+import { Route, Routes, Link, useParams } from "react-router-dom";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
+import Todo from "./components/Todo";
 
 const App = () => {
+
   return (
-    <main className='bg-[#331148]'>
-      <h1 className='text-4xl text-red-500 font-bold '>Hello</h1>
-      <Form />
+    <main className="flex justify-center items-center h-full">
+      <Todo />
     </main>
   )
 }
