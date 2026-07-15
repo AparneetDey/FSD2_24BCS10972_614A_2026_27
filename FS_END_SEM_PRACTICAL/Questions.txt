@@ -1,0 +1,4 @@
+
+Q2. Create a simple HTML + JavaScript example with a button: “Show Date & Time” When clicked, the current date and time should display dynamically below the button (using event handling and DOM manipulation).
+
+Q4. Describe its purpose and how it handles HTTP requests. Create a controller named StudentController with a GET API /students that returns a list of dummy students.
