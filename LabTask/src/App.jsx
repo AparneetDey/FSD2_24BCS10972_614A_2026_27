@@ -2,16 +2,17 @@ import React, { useState } from 'react'
 import Todo from './components/todo/Todo'
 import Stopwatch from './components/stopwatch/Stopwatch'
 import Counter from './components/counter/Counter'
+import CurrencyConverter from './components/currency_convertor/CurrencyConverter'
 
 const comps = {
   "Counter": <Counter />,
   "Stopwatch": <Stopwatch />,
   "Todo": <Todo />,
+  "Currency Converter": <CurrencyConverter />,
 }
 
 const App = () => {
   const [tab, setTab] = useState("Counter");
-
 
   return (
     <main className='w-full h-screen'>
