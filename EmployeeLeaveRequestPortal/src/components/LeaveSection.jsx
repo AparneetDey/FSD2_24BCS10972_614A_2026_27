@@ -1,6 +1,7 @@
 import React from 'react'
 
-const LeaveSection = ({employee}) => {
+const LeaveSection = ({employee, setEmployee}) => {
+
   return (
     <div>
         <h2>Leave Section</h2>
@@ -9,7 +10,7 @@ const LeaveSection = ({employee}) => {
                 <p>{employee.name}</p>
                 <p>{employee.department}</p>
                 <p>{employee.leaveBalance}</p>
-                <button>Approve</button>
+                <button onClick={() => setEmployee(null)}>Approve</button>
             </div>
         ) : (
             <p>No leave has been applied</p>

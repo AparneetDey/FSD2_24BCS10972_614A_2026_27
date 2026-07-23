@@ -44,7 +44,7 @@ const App = () => {
         ))}
       </div>
 
-      <Dashboard employee={leaveRequest} />
+      <Dashboard employee={leaveRequest} setEmployee={setLeaveRequest} />
     </main>
   )
 }
