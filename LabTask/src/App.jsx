@@ -4,6 +4,7 @@ import Stopwatch from './components/stopwatch/Stopwatch'
 import Counter from './components/counter/Counter'
 import CurrencyConverter from './components/currency_convertor/CurrencyConverter'
 import PropDrilling from './components/prop_drilling/PropDrilling'
+import ContextAPI from './components/context_api/ContextAPI'
 
 const comps = {
     "Counter": <Counter />,
@@ -11,6 +12,7 @@ const comps = {
     "Todo": <Todo />,
     "Currency Converter": <CurrencyConverter />,
     "Prop Drilling": <PropDrilling />,
+    "Context API": <ContextAPI />,
 }
 
 const App = () => {
@@ -18,7 +20,7 @@ const App = () => {
 
     return (
         <main className='w-full h-screen'>
-            <nav className='w-full flex justify-around py-4 mb-24'>
+            <nav className='w-full flex justify-around py-4 mb-24 flex-wrap gap-y-2'>
                 {Object.keys(comps).map((name, ind) => (
                     <button className='bg-yellow-400 border-yellow-900 btn' onClick={() => setTab(name)} key={ind}>{name}</button>
                 ))}
