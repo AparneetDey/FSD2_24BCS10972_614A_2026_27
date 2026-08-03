@@ -1,9 +1,9 @@
 import React from 'react'
 import LeaveSection from './LeaveSection'
 
-const EmployeeSection = ({employee, setEmployee}) => {
+const EmployeeSection = () => {
   return (
-    <LeaveSection employee={employee} setEmployee={setEmployee} />
+    <LeaveSection />
   )
 }
 

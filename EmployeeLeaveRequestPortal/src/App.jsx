@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import Dashboard from './components/Dashboard'
+import { useLeave } from './context/LeaveContext'
 
 const App = () => {
   const [employees, setEmployees] = useState(
@@ -23,13 +24,13 @@ const App = () => {
       },
     ]
   );
-  const [leaveRequest, setLeaveRequest] = useState(null);
 
+  const {leaveRequest, setLeaveRequest} = useLeave();
 
   const onApplyLeave = (ind) => {
     setLeaveRequest(employees[ind]);
   }
-  
+
   return (
     <main>
       <div>
@@ -44,7 +45,7 @@ const App = () => {
         ))}
       </div>
 
-      <Dashboard employee={leaveRequest} setEmployee={setLeaveRequest} />
+      <Dashboard />
     </main>
   )
 }

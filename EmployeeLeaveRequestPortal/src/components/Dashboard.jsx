@@ -1,9 +1,9 @@
 import React from 'react'
 import EmployeeSection from './EmployeeSection'
 
-const Dashboard = ({employee, setEmployee}) => {
+const Dashboard = () => {
   return (
-    <EmployeeSection employee={employee} setEmployee={setEmployee}/>
+    <EmployeeSection />
   )
 }
 
