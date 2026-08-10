@@ -6,6 +6,7 @@ import CurrencyConverter from './components/currency_convertor/CurrencyConverter
 import PropDrilling from './components/prop_drilling/PropDrilling'
 import ContextAPI from './components/context_api/ContextAPI'
 import { Link, Route, Routes } from 'react-router'
+import Home from './components/home/Home'
 
 const comps = {
     "Counter": {
@@ -45,6 +46,7 @@ const App = () => {
             </nav>
             <div className='flex justify-center items-center'>
                 <Routes>
+                    <Route path='/' element={<Home />} />
                     {Object.keys(comps).map((ele, ind) => (
                         <Route key={ind} path={comps[ele].path} element={comps[ele].element} />
                     ))}
