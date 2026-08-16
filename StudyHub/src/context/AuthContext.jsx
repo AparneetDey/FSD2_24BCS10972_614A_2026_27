@@ -4,17 +4,9 @@ const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
     const [student, setStudent] = useState(null)
-    const [tasks, setTasks] = useState([
-        { id: 1, title: "Finish DBMS assignment", completed: false },
-        { id: 2, title: "Revise React hooks", completed: false },
-        { id: 3, title: "Submit lab report", completed: true },
-    ])
 
     const login = (user) => {
-        console.log(user);
         setStudent(user);
-
-        console.log(student);
     }
 
     const logout = () => {
@@ -23,8 +15,6 @@ const AuthProvider = ({ children }) => {
 
     const value =  {
         student,
-        tasks,
-        setTasks,
         login,
         logout
     }
