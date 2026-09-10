@@ -12,7 +12,7 @@ const ProductList = () => {
             <h3>Products</h3>
             <div>
                 {products.map((product, ind) => (
-                    <div key={ind}>
+                    <div style={{display: "flex", gap: "12px", alignItems: "center"}} key={ind}>
                         <h4>{product.name}</h4>
                         <p>Price: {formatPrice(product.originalPrice)}</p>
                         <button onClick={() => addToCart(product.usdPrice)}>Add to cart</button>
